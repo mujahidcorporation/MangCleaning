@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CuciPanggilan.id - Jasa Cuci Panggilan</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <h1 class="logo">CuciPanggilan.id</h1>
+      <a href="#order" class="btn-primary">Pesan Sekarang</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h2>Layanan Cuci Panggilan ke Lokasi Anda</h2>
+      <p>Cuci mobil, motor, AC, dan rumah. Kami datang ke tempat Anda!</p>
+      <a href="#order" class="btn-primary">Pesan Sekarang</a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section services">
+    <div class="container">
+      <h3 class="section-title">Layanan Kami</h3>
+      <div class="service-grid">
+        <div class="service-card">
+          <img src="https://img.icons8.com/ios/100/car--v1.png" alt="Cuci Mobil">
+          <h4>Cuci Mobil</h4>
+          <p>Cuci luar dalam langsung di rumah Anda.</p>
+        </div>
+        <div class="service-card">
+          <img src="https://img.icons8.com/ios/100/motorcycle.png" alt="Cuci Motor">
+          <h4>Cuci Motor</h4>
+          <p>Motor kinclong tanpa harus keluar rumah.</p>
+        </div>
+        <div class="service-card">
+          <img src="https://img.icons8.com/ios/100/air-conditioner.png" alt="Cuci AC">
+          <h4>Cuci AC</h4>
+          <p>AC kembali dingin dengan pencucian rutin.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section testimonials">
+    <div class="container">
+      <h3 class="section-title">Apa Kata Pelanggan</h3>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p>"Pelayanan cepat dan bersih. Recommended!"</p>
+          <span>- Andi, Jakarta</span>
+        </div>
+        <div class="testimonial-card">
+          <p>"Gak perlu keluar rumah, motor udah kinclong!"</p>
+          <span>- Rina, Bandung</span>
+        </div>
+        <div class="testimonial-card">
+          <p>"AC rumah jadi adem lagi setelah dicuci. Mantap!"</p>
+          <span>- Dedi, Bekasi</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Order Form -->
+  <section class="section form-section" id="order">
+    <div class="container">
+      <h3 class="section-title">Pesan Layanan Sekarang</h3>
+      <form class="order-form" onsubmit="sendToWhatsApp(); return false;">
+        <input type="text" id="nama" placeholder="Nama Lengkap" required>
+        <input type="tel" id="hp" placeholder="Nomor HP" required>
+        <textarea id="alamat" placeholder="Alamat Lengkap" required></textarea>
+        <select id="layanan" required>
+            <option value="">Pilih Layanan</option>
+            <option value="Cuci Mobil">Cuci Mobil</option>
+            <option value="Cuci Motor">Cuci Motor</option>
+            <option value="Cuci AC">Cuci AC</option>
+        </select>
+        <button type="submit" class="btn-primary full">Kirim via WhatsApp</button>
+        </form>
+    </div>
+
+
+    <script>
+  function sendToWhatsApp() {
+    const nama = document.getElementById("nama").value;
+    const hp = document.getElementById("hp").value;
+    const alamat = document.getElementById("alamat").value;
+    const layanan = document.getElementById("layanan").value;
+
+    // Ganti dengan nomor WhatsApp admin (tanpa +, pakai kode negara)
+    const adminNumber = "6282113949719";
+
+    // Format pesan
+    const message = `Halo admin, saya ingin memesan layanan:\n\n` +
+      `📌 *Nama:* ${nama}\n` +
+      `📞 *No HP:* ${hp}\n` +
+      `📍 *Alamat:* ${alamat}\n` +
+      `🧼 *Layanan:* ${layanan}\n\n` +
+      `Mohon segera dikonfirmasi ya. Terima kasih! 🙏`;
+
+    const encodedMessage = encodeURIComponent(message);
+
+    // Buka WhatsApp (mobile/web otomatis)
+    const waLink = `https://wa.me/${adminNumber}?text=${encodedMessage}`;
+
+    window.open(waLink, "_blank");
+  }
+</script>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 CuciPanggilan.id — All rights reserved</p>
+      <p>Hubungi kami: 0812-3456-7890</p>
+    </div>
+  </footer>
+</body>
+</html>
