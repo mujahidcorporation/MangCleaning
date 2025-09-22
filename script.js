@@ -14,15 +14,17 @@ fetch("data.json")
       layananDiv.innerHTML = `
         <img src="${item.gambar}" alt="${item.nama}">
         <div class="layanan-content">
-          <h3>${item.nama}</h3>
-          <p>${item.deskripsi}</p>
-          <a class="wa-button" href="https://wa.me/${nomorWhatsApp}?text=${pesan}" target="_blank" rel="noopener noreferrer">
-            Pesan via WhatsApp
-          </a>
-        </div>
+  <h3>Desain Logo</h3>
+  <p>Kami menyediakan layanan desain logo profesional untuk brand Anda.</p>
+  <a class="wa-button" href="https://wa.me/6282113949719?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20Anda." target="_blank" rel="noopener noreferrer">
+    Pesan via WhatsApp
+  </a>
+</div>
+
       `;
 
       layananList.appendChild(layananDiv);
     });
   })
   .catch(error => console.error("Gagal memuat data:", error));
+
