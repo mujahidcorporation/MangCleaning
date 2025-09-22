@@ -199,7 +199,7 @@ nav {
 /* FOOTER */
 footer {
   background-color: #222;
-  color: #aaa;
+  color: #000000;
   text-align: center;
   padding: 20px;
   font-size: 0.9rem;
@@ -247,6 +247,7 @@ footer {
   filter: brightness(100%);
   transform: scale(1.1);
 }
+
 
 
 
