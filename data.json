@@ -1,0 +1,29 @@
+{
+  "layanan": [
+    {
+      "nama": "Cuci Springbed",
+      "deskripsi": "Membersihkan springbed dari debu, kotoran, dan tungau hingga bersih dan wangi.",
+      "gambar": "img/Springbed2.png"
+    },
+    {
+      "nama": "Cuci Sofa",
+      "deskripsi": "Sofa kesayangan Anda bersih kembali seperti baru dengan teknik cuci profesional.",
+      "gambar": "img/sofa.png"
+    },
+    {
+      "nama": "Cuci Jok Mobil",
+      "deskripsi": "Jok mobil bersih, bebas noda dan nyaman digunakan kembali.",
+      "gambar": "img/JokMobil.png"
+    },
+    {
+      "nama": "Cuci Gorden",
+      "deskripsi": "Gorden rumah Anda kembali bersih, wangi, dan segar.",
+      "gambar": "img/Gorden.png"
+    },
+    {
+      "nama": "Cuci Karpet",
+      "deskripsi": "Karpet Anda bersih maksimal tanpa merusak serat dan warna.",
+      "gambar": "img/Karpet.png"
+    }
+  ]
+}

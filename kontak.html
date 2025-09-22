@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontak - Jasa Cuci Profesional</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="container nav-container">
+      <a href="index.html" class="brand">
+        <img src="MAMANG cleaner.png" alt="Logo" />
+        <span>Mamang Cleaner</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="tentang.html">Tentang</a></li>
+        <li><a href="layanan.html">Layanan</a></li>
+        <li><a href="kontak.html" class="active">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container kontak-container">
+    <h2>Kontak Kami</h2>
+    <p>Isi formulir di bawah, kami akan segera menghubungi Anda via WhatsApp.</p>
+
+    <form id="contact-form">
+      <label for="nama">Nama:</label>
+      <input type="text" id="nama" name="nama" required />
+
+      <label for="telepon">Nomor WhatsApp:</label>
+      <input type="tel" id="telepon" name="telepon" placeholder="Contoh: 081234567890" required />
+
+      <label for="pesan">Pesan:</label>
+      <textarea id="pesan" name="pesan" rows="4" placeholder="Tulis pesan Anda..." required></textarea>
+
+      <button type="submit" class="wa-button">Kirim via WhatsApp</button>
+    </form>
+  </main>
+
+  <footer>
+    <div class="container footer-container">
+      <p>&copy; 2025 Mamang Cleaner</p>
+      <div class="social-media">
+        <a href="https://facebook.com/namaperusahaan" target="_blank" rel="noopener" aria-label="Facebook">
+          <img src="icons/facebook.svg" alt="Facebook" />
+        </a>
+        <a href="https://instagram.com/namaperusahaan" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="icons/instagram.svg" alt="Instagram" />
+        </a>
+        <a href="https://wa.me/6282113949719" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <img src="icons/whatsapp.svg" alt="WhatsApp" />
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e){
+      e.preventDefault();
+
+      const nama = document.getElementById('nama').value.trim();
+      const telepon = document.getElementById('telepon').value.trim();
+      const pesan = document.getElementById('pesan').value.trim();
+
+      if(!nama || !telepon || !pesan) {
+        alert('Mohon isi semua field!');
+        return;
+      }
+
+      // Encode pesan WhatsApp
+      const text = encodeURIComponent(`Halo, nama saya ${nama}. Saya ingin menghubungi Anda.\n\nPesan:\n${pesan}`);
+
+      // Buka WhatsApp dengan nomor yang diinput pengguna
+      const waUrl = `https://wa.me/${telepon.replace(/\D/g, '')}?text=${text}`;
+      window.open(waUrl, '_blank');
+    });
+  </script>
+</body>
+</html>
