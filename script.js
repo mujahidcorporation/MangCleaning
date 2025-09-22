@@ -13,11 +13,16 @@ fetch("data.json")
 
       layananDiv.innerHTML = `
         <img src="${item.gambar}" alt="${item.nama}">
+        <div class="layanan-content">
+          <h3>${item.nama}</h3>
+          <p>${item.deskripsi}</p>
+          <a class="wa-button" href="https://wa.me/${nomorWhatsApp}?text=${pesan}" target="_blank" rel="noopener noreferrer">
+            Pesan via WhatsApp
+          </a>
+        </div>
       `;
 
       layananList.appendChild(layananDiv);
     });
   })
   .catch(error => console.error("Gagal memuat data:", error));
-
-
