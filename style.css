@@ -206,7 +206,7 @@ footer {
   margin-top: 50px;
 }
 footer {
-  background-color: #222;
+  background-color: #1bc9e0;
   color: #aaa;
   text-align: center;
   padding: 20px;
@@ -247,4 +247,5 @@ footer {
   filter: brightness(100%);
   transform: scale(1.1);
 }
+
 
