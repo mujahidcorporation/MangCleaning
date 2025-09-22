@@ -8,8 +8,17 @@ fetch("data.json")
     data.layanan.forEach(item => {
       const layananDiv = document.createElement("div");
       layananDiv.className = "layanan-item";
+  
+      const pesan = encodeURIComponent(
+      `Assalaamu'alaikum.\n\n` +
+      `Perkenalkan, nama saya .......... Saya tertarik untuk menggunakan layanan *${item.nama}*.\n\n` +
+      `Berikut rincian pesanan saya:\n` +
+      `• Jumlah/Unit: ..........\n` +
+      `• Alamat lengkap: ..........\n` +
+      `• Waktu yang diinginkan: ..........\n\n` +
+      `Mohon konfirmasinya, terima kasih.`
+      );
 
-      const pesan = encodeURIComponent(`Halo, saya ingin memesan jasa ${item.nama}`);
 
       layananDiv.innerHTML = `
         <img src="${item.gambar}" alt="${item.nama}">
@@ -26,3 +35,4 @@ fetch("data.json")
     });
   })
   .catch(error => console.error("Gagal memuat data:", error));
+
