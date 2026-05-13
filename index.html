@@ -206,51 +206,57 @@
     </iframe>
 
   </div>
-  <!-- SURAT IZIN KELUAR -->
+ <!-- SURAT IZIN KELUAR -->
 <div id="suratIzinKeluar" class="menu">
-
   <h2>Surat Izin Keluar</h2>
 
-  <form
-    action="https://script.google.com/macros/s/AKfycbxKu5pQSHUHb9yMqpG5k3xuAp8GGp4oVtzvO5OuvdCFMICyC0Mm5MoFsAY9lXnYzdU/exec"
-    method="POST"
+  <form 
+    action="https://script.google.com/macros/s/AKfycbxKu5pQSHUHb9yMqpG5k3xuAp8GGp4oVtzvO5OuvdCFMICyC0Mm5MoFsAY9lXnYzdU/exec" 
+    method="POST" 
     target="_blank"
   >
+    <input type="hidden" name="jenis" value="Surat Izin Keluar">
 
-  <input type="hidden" name="jenis" value="Surat Izin Keluar">
+    <input type="date" name="tanggal" placeholder="Tanggal Keluar" required>
+    <input type="time" name="jam" placeholder="Jam Keluar" required>
+    <input type="text" name="nama" placeholder="Nama" required>
+    <input type="text" name="jabatan" placeholder="Jabatan" required>
+    <textarea name="keperluan" placeholder="Keperluan" required></textarea>
+    <input type="text" name="izinOleh" placeholder="Yang Mengizinkan" required>
+    <input type="time" name="jamPulang" placeholder="Jam Pulang" required>
 
-  <input type="date" name="tanggal" placeholder="Tanggal Keluar" required>
-  <input type="time" name="jam" placeholder="Jam Keluar" required>
-  <input type="time" name="jamPulang" placeholder="Jam Pulang" required>
-  <input type="text" name="nama" placeholder="Nama" required>
-  <input type="text" name="jabatan" placeholder="Jabatan" required>
-  <textarea name="keperluan" placeholder="Keperluan" required></textarea>
-  <input type="text" name="izinOleh" placeholder="Yang Mengizinkan" required>
+    <button type="submit">Simpan</button>
+  </form>
 
-  <button type="submit">Simpan</button>
-</form>
+  <hr>
 
-<hr>
+  <h3>Data Surat Izin Keluar</h3>
+  <input 
+    type="text" 
+    id="searchIzinKeluar" 
+    placeholder="Cari surat izin keluar..." 
+    class="search-box" 
+    onkeyup="searchTable('searchIzinKeluar','frameIzinKeluar')"
+  >
 
-<h3>Data Surat Izin Keluar</h3>
-<input
-  type="text"
-  id="searchIzinKeluar"
-  placeholder="Cari surat izin keluar..."
-  class="search-box"
-  onkeyup="searchTable('searchIzinKeluar','frameIzinKeluar')">
+  <a href="https://docs.google.com/spreadsheets/d/1gDuc-zU1weVlvNT9JAo3XZmftYdqd8w4l0VliXLpg90/edit" 
+     target="_blank" 
+     class="admin-btn">
+    Edit Data Spreadsheet
+  </a>
 
-  <a href="https://docs.google.com/spreadsheets/d/1gDuc-zU1weVlvNT9JAo3XZmftYdqd8w4l0VliXLpg90/edit" target="_blank" class="admin-btn">Edit Data Spreadsheet</a>
-
-  <a href="https://docs.google.com/spreadsheets/d/1gDuc-zU1weVlvNT9JAo3XZmftYdqd8w4l0VliXLpg90/export?format=xlsx" target="_blank" class="download-btn">
+  <a href="https://docs.google.com/spreadsheets/d/1gDuc-zU1weVlvNT9JAo3XZmftYdqd8w4l0VliXLpg90/export?format=xlsx" 
+     target="_blank" 
+     class="download-btn">
     Download Excel
   </a>
 
-  <iframe
-    id="frameIzinKeluar"
-    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSPo8u8p6BVElhAvPZzwoDMP2hEgOsw8X9Zghl7TjmKvQpd6ODv7tOwgnJmHHbazC8PWGjoJBxNYC1D/pubhtml?gid=0&single=true"
+  <iframe 
+    id="frameIzinKeluar" 
+    src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTCSMti5VGBTNmGhVoqaegmbuZn3VWiaQDENsJhhjhIs57i4ZKaRFLP1AHfADHoQSAY62JcisKnRjPg/pubhtml?gid=0&single=true" 
     class="frame">
   </iframe>
+</div>
 
 </div>
 
