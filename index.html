@@ -217,64 +217,28 @@
     target="_blank"
   >
 
-    <input type="hidden" name="jenis" value="Surat Izin Keluar">
+  <input type="hidden" name="jenis" value="Surat Izin Keluar">
 
-    <input
-      type="date"
-      name="tanggal"
-      placeholder="Tanggal Keluar"
-      required>
+  <input type="date" name="tanggal" placeholder="Tanggal Keluar" required>
+  <input type="time" name="jam" placeholder="Jam Keluar" required>
+  <input type="time" name="jamPulang" placeholder="Jam Pulang" required>
+  <input type="text" name="nama" placeholder="Nama" required>
+  <input type="text" name="jabatan" placeholder="Jabatan" required>
+  <textarea name="keperluan" placeholder="Keperluan" required></textarea>
+  <input type="text" name="izinOleh" placeholder="Yang Mengizinkan" required>
 
-    <input
-      type="time"
-      name="jam"
-      placeholder="Jam Keluar"
-      required>
+  <button type="submit">Simpan</button>
+</form>
 
-    <input
-      type="text"
-      name="nama"
-      placeholder="Nama"
-      required>
+<hr>
 
-    <input
-      type="text"
-      name="jabatan"
-      placeholder="Jabatan"
-      required>
-
-    <textarea
-      name="keperluan"
-      placeholder="Keperluan"
-      required></textarea>
-
-    <input
-      type="text"
-      name="izinOleh"
-      placeholder="Yang Mengizinkan"
-      required>
-
-    <input
-      type="time"
-      name="jam"
-      placeholder="Jam Pulang"
-      required>
-
-    <button type="submit">
-      Simpan
-    </button>
-
-  </form>
-
-  <hr>
-
-  <h3>Data Surat Izin Keluar</h3>
-  <input
-    type="text"
-    id="searchIzinKeluar"
-    placeholder="Cari surat izin keluar..."
-    class="search-box"
-    onkeyup="searchTable('searchIzinKeluar','frameIzinKeluar')">
+<h3>Data Surat Izin Keluar</h3>
+<input
+  type="text"
+  id="searchIzinKeluar"
+  placeholder="Cari surat izin keluar..."
+  class="search-box"
+  onkeyup="searchTable('searchIzinKeluar','frameIzinKeluar')">
 
   <a href="https://docs.google.com/spreadsheets/d/1gDuc-zU1weVlvNT9JAo3XZmftYdqd8w4l0VliXLpg90/edit" target="_blank" class="admin-btn">Edit Data Spreadsheet</a>
 
