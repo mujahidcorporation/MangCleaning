@@ -186,3 +186,13 @@ body{
   border-radius:6px;
   font-size:14px;
 }
+
+/* Footer */
+footer {
+  background-color: #004d40;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 2em;
+  margin-top: 30px;
+}
